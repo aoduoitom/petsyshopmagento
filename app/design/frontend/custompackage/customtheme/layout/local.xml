@@ -4,16 +4,6 @@
 	<reference name="root">
 		<action method="unsetChild"><name>global_notices</name></action>
 	</reference>
-	<!--<reference name="head">
-		<action method="addItem">
-			<type>skin_css</type>
-			<name>css/grid.css</name>
-		</action>
-		<action method="addItem">
-			<type>skin_css</type>
-			<name>css/style.css</name>
-		</action>
-	</reference>-->
 
 </default>
 </layout>
