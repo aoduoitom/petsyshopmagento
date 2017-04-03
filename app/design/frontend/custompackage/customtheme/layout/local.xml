@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout version="0.1.0">
-    <default>
+<default>
+	<reference name="root">
+		<action method="unsetChild"><name>global_notices</name></action>
+	</reference>
+	<!--<reference name="head">
+		<action method="addItem">
+			<type>skin_css</type>
+			<name>css/grid.css</name>
+		</action>
+		<action method="addItem">
+			<type>skin_css</type>
+			<name>css/style.css</name>
+		</action>
+	</reference>-->
 
-    </default>
+</default>
 </layout>
