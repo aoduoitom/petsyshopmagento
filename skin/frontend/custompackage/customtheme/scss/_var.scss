@@ -47,10 +47,10 @@ $default-transition-delay: 0;
 // If these are changed, they must also be updated in app.js
 
 $bp-xsmall: 479px;
-$bp-small: 599px;
-$bp-medium: 770px;
+$bp-small: 639px;
+$bp-medium: 767px;
 $bp-large: 979px;
-$bp-xlarge: 1199px;
+$bp-xlarge: 1170px;
 
 // =============================================
 // Base Values
@@ -75,7 +75,7 @@ $element-spacing: 7px;
 
 // Dimensions
 
-$max-content-width: 1200px;
+$max-content-width: 1171px;
 $max-container-width: $trim + $max-content-width + $trim;
 $max-std-formatted-width: 50em;
 
@@ -94,6 +94,10 @@ $c-red: #CF5050;
 $c-yellow: #FFDD15;
 $c-black: #000000;
 $c-gray: #333333;
+$c-white: #ffffff;
+
+$main-color: #0093dd;
+
 
 // =============================================
 // Base Colors
@@ -101,7 +105,7 @@ $c-gray: #333333;
 
 // Text
 
-$c-text: #636363;
+$c-text: $c-black;
 $c-text-gray: #A0A0A0;
 $c-text-white: #E6E6E6;
 // Primary font color for headings and other non-link text
@@ -218,11 +222,36 @@ $c-email-highlighted-border: #FFF74C;
 
 // Font Stacks
 
-$f-stack-sans: 'Helvetica Neue', Verdana, Arial, sans-serif;
+$f-stack-sans: Arial, sans-serif;
 $f-stack-serif: Georgia, Times, 'Times New Roman', serif;
 $f-stack-special: 'Raleway', 'Helvetica Neue', Verdana, Arial, sans-serif;
 
 $f-stack-default: $f-stack-sans;
+
+$f-myriadpro-bold-cond: 'MyriadPro-BoldCond';
+
+@font-face {
+  font-family: 'MyriadPro-BoldCond';
+  src: url('../fonts/Myriad Pro Bold Condensed.eot');
+  src: local('☺'), url('../fonts/Myriad Pro Bold Condensed.woff') format('woff'),
+  url('../fonts/Myriad Pro Bold Condensed.ttf') format('truetype'),
+  url('../fonts/Myriad Pro Bold Condensed.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$f-myriadpro-regular: 'MyriadPro-Regular';
+
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url('../fonts/MyriadPro-Regular.eot');
+  src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'),
+  url('../fonts/MyriadPro-Regular.ttf') format('truetype'),
+  url('../fonts/MyriadPro-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 // Font Sizes
 

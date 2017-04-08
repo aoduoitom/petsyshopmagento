@@ -1,3 +1,18 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'MyriadPro-BoldCond';
+  src: url("../fonts/Myriad Pro Bold Condensed.eot");
+  src: local("Γÿ║"), url("../fonts/Myriad Pro Bold Condensed.woff") format("woff"), url("../fonts/Myriad Pro Bold Condensed.ttf") format("truetype"), url("../fonts/Myriad Pro Bold Condensed.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url("../fonts/MyriadPro-Regular.eot");
+  src: local("Γÿ║"), url("../fonts/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular.ttf") format("truetype"), url("../fonts/MyriadPro-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /*
 // ----------------------------------------------
 // Usage example:
@@ -662,7 +677,7 @@ h2.products {
 
 .product-name {
   margin: 0 0 5px 0;
-  color: #636363;
+  color: #000000;
   font-style: normal;
   text-rendering: optimizeLegibility;
   text-transform: uppercase;
@@ -684,7 +699,7 @@ p.sku {
  * ============================================ */
 .price-box {
   margin: 7px 0;
-  font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .price-box p {
@@ -702,7 +717,7 @@ p.sku {
 
 .price-box .price,
 .price {
-  font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .price-box .price-label {

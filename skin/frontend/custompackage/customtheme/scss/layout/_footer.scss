@@ -27,13 +27,20 @@
  * Footer
  * ============================================ */
 
+#footer {
+    padding: 50px 2% 8px 2%;
+    background: #1f1f1f;
+    margin-top: 10px;
+}
+
+
 /* -------------------------------------------- *
  * Footer
  */
 
 .footer,
 .footer button {
-    font-family: $f-stack-special;
+    font-family: $f-stack-default;
 }
 
 .footer {
@@ -244,5 +251,17 @@
             float: left;
             width: 100%;
         }
+    }
+}
+
+
+/* ============================================ *
+ * Copyright
+ * ============================================ */
+
+#copyright {
+    background: $c-black;
+    address {
+        color: #ffffff;
     }
 }

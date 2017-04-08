@@ -24,9 +24,20 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="footer-container">
-    <div class="footer">
-        <?php echo $this->getChildHtml() ?>
-        <address class="copyright"><?php echo $this->getCopyright() ?></address>
+<footer id="footer" class="">
+    <div class="grid">
+        <div class="row">
+            <div class="footer">
+                <?php echo $this->getChildHtml() ?>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="copyright">
+    <div class="grid">
+        <div class="row">
+            <address class="copyright"><?php echo $this->getCopyright() ?></address>
+            <address class="payment"><?php echo $this->getPaymentMethod() ?></address>
+        </div>
     </div>
 </div>

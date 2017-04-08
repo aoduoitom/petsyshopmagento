@@ -1276,3 +1276,12 @@ var ProductMediaManager = {
 $j(document).ready(function() {
     ProductMediaManager.init();
 });
+
+/*search hover*/
+$j(document).ready(function() {
+   $j('.input-box').mouseover(function() {
+       $j('#search').stop(true, true).show(800);
+   }).mouseout(function() {
+       $j('#search').stop(true, true).hide(800);
+   })
+});

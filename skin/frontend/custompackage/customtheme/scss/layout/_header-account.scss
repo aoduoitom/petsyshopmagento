@@ -27,26 +27,7 @@
  * Header - Account
  * ============================================ */
 
-/* -------------------------------------------- *
- * Skip Link - Account
- */
-
-.skip-account {
-
-    &:not(.skip-active):hover {
-        .icon {
-            background-position: -50px+4px (-50px + ($toolbar-icon-padding-offset/2) + 2px);
-        }
-    }
-
-    .icon {
-        @extend .icon-sprite;
-        background-position: -0px+4px (-50px + ($toolbar-icon-padding-offset/2) + 2px);
-    }
-}
-
-// ---------------------------------------------
-
+/*
 @include bp(min-width, $bp-medium + 1) {
 
     .skip-account {
@@ -73,34 +54,62 @@
 
     #header-account a {
         display: block;
-        padding: 5px 10px;
         color: $c-text;
         line-height: 2;
     }
 
     #header-account a:hover {
-        color: $c-action;
+        color: $main-color;
     }
 
 }
+*/
 
 /* -------------------------------------------- *
  * Account Links
  */
 
 #header-account {
-    padding: 5px 0;
+    float: right;
+    .links:after {
+        @include clearfix;
+    }
+    a {
+        position: relative;
+        display: block;
+        color: $c-black;
+        line-height: 30px;
+        text-align: center;
+        font-size: 0.75rem;
+        text-decoration: none;
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+
+    ul {
+        &:after {
+          @include clearfix;
+        }
+
+        li {
+            display: inline-block;
+            float: left;
+            &:last-child {
+              padding-right: 6px;
+            }
+        }
+        span.spliter {
+            width: 26px;
+            height: 30px;
+            display: inline-block;
+            float: left;
+            background: url("../images/spliter_bg.png") center no-repeat;
+        }
+    }
+
+
 }
 
-#header-account a {
-    position: relative;
-    display: block;
-    padding: 5px 10px;
-    line-height:23px;
-    text-align: center;
-}
-
-#header-account a:hover {
-    color: $c-action;
-}
 

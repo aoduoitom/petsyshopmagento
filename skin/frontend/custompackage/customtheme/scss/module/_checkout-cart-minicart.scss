@@ -29,6 +29,8 @@
 
 .header-minicart {
     display: inline-block;
+    float: right;
+    margin-right: 20px;
 
     @include bp(max-width, $bp-medium) {
         display: block;

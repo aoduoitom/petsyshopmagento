@@ -1,279 +1,215 @@
-//
-// Magento
-//
-// NOTICE OF LICENSE
-//
-// This source file is subject to the Academic Free License (AFL 3.0)
-// that is bundled with this package in the file LICENSE_AFL.txt.
-// It is also available through the world-wide-web at this URL:
-// http://opensource.org/licenses/afl-3.0.php
-// If you did not receive a copy of the license and are unable to
-// obtain it through the world-wide-web, please send an email
-// to license@magento.com so we can send you a copy immediately.
-//
-// DISCLAIMER
-//
-// Do not edit or add to this file if you wish to upgrade Magento to newer
-// versions in the future. If you wish to customize Magento for your
-// needs please refer to http://www.magento.com for more information.
-//
-// @category    design
-// @package     rwd_default
-// @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
-// @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-//
 
-/* ============================================ *
- * Nav - Skip Link
- * ============================================ */
 
-.skip-nav {
-    width: 40%;
 
-    &:not(.skip-active):hover {
-        text-decoration: none;
 
-        .icon {
-            background-position: -50px+4px ($toolbar-icon-padding-offset/2);
-        }
-    }
-}
 
-.skip-nav .label {
-    display: inline;
-}
-
-.skip-nav .icon {
-    @extend .icon-sprite;
-    background-position: 0+4px ($toolbar-icon-padding-offset/2);
-}
-
-// ---------------------------------------------
-
-@include bp(min-width, 500px) {
-
-    .skip-nav {
-        width: 25%;
-    }
-
-}
-
-// ---------------------------------------------
-
-@include bp(min-width, $bp-medium + 1) {
-
-    .skip-nav {
-        display: none;
-    }
-
-}
-
-/* ============================================ *
- * Nav - Skip Content
- * ============================================ */
-
-@include bp(max-width, $bp-medium) {
-
-    #header-nav {
-        padding: 5px 0;
-    }
-
-}
-
-// ---------------------------------------------
-
-@include bp(min-width, $bp-medium + 1) {
-
-    #header-nav {
-        display: block; /* Force visibility */
-        border-bottom: 1px solid $c-module-border-light;
-    }
-
-}
 
 /* ============================================ *
  * Nav Primary
  * ============================================ */
 
-@include bp(min-width, $bp-medium + 1) {
-    .nav-primary {
-        display: block;
-        margin-top: 15px;
-    }
+$nav-primary-height: 40px;
 
-}
+#header-nav {
+    background-color: $main-color;
+    margin: 20px 0;
 
-/* ============================================ *
- * General Navigation Styles
- * ============================================ */
+    #nav {
+        /*display: none;*/
+        padding: 0 15px;
 
-$nav-primary-height: 30px;
+        .menu-icon {
+            height: 40px;
+            width: 100%;
+            line-height: 40px;
+            text-transform: uppercase;
+            color: #ffffff;
+            /*font-family: $f-myriadpro-regular;*/
+            margin-bottom: 0;
+            font-weight: bold;
 
-.nav-primary {
-    a {
-        text-decoration: none;
-        position: relative;
-        display: block;
-        color: $c-text;
-        line-height: $nav-primary-height;
-        font-family: $f-stack-special;
-    }
+            .animated-icon {
+                display: inline-block;
+                cursor: pointer;
+                float: right;
+                margin-right: 2%;
+            }
 
-    li {
-        position: relative;
-    }
+            .bar1, .bar2, .bar3 {
+                width: 35px;
+                height: 5px;
+                background-color: #ffffff;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
 
-    li.level1 a {
-        border-bottom: 1px solid $c-module-border;
-    }
-}
+            .change .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+                transform: rotate(-45deg) translate(-9px, 6px) ;
+            }
 
-// Show sub-menus when JS adds the appropriate classes
-.nav-primary .menu-active > ul.level0,
-.nav-primary li.level0 li.sub-menu-active > ul {
-    display: block;
-}
+            .change .bar2 {opacity: 0;}
 
-.nav-primary li.level0 > a {
-    text-transform: uppercase;
-}
+            .change .bar3 {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+                transform: rotate(45deg) translate(-8px, -8px) ;
+            }
 
-/* ============================================ *
- * Small Viewports - Accordion Style Menu
- * ============================================ */
-
-@include bp(max-width, $bp-medium) {
-
-    .nav-primary {
-
-        // Increase clickable area of anchors for small viewports
-        a.level0,
-        a {
-            line-height: $nav-primary-height + 5px;
         }
 
-        // Hide all sub-menus
-        li.level0 ul {
+        .nav-primary {
             display: none;
-        }
+            ul {
+                display: none;
+            }
+            li {
+                position: relative;
+                border-top: 1px solid $c-white;
+                a {
+                    text-decoration: none;
+                    position: relative;
+                    display: block;
+                    color: $c-white;
+                    line-height: $nav-primary-height;
+                    font-family: $f-stack-default;
+                    font-weight: bold;
 
-        // Indent sub-menus
-        li.level0 li {
-            padding: 0 0 0 25px;
-        }
+                    &.level0 {
+                        text-transform: uppercase;
+                    }
 
-        li.level1 a {
-            padding: 0 15px 0 25px;
-        }
+                    &.level1 {
+                        padding-left: 1rem;
+                    }
+                }
+                .btn-submenu {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    font-family: 'FontAwesome';
+                    font-size: 1rem;
+                    line-height: 40px;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 40px;
+                    height: 40px;
+                }
 
-        li.parent > a:after {
-            @include triangle(right, 5px, #ccc);
-            top: 50%;
-            left: 10px;
-            right: auto;
-            margin-top: -5px;
-        }
+                .btn-submenu:before {
+                    content: "\f067";
+                    color: #ffffff;
+                }
 
-        // Menu active states
-        li.parent.sub-menu-active > a:after,
-        li.parent.menu-active > a:after {
-            @include triangle(down, 5px, #ccc);
-            top: 50%;
-            left: 10px;
-            right: auto;
-            margin-top: -5px;
-        }
+                .btn-submenu.active:before {
+                    content: "\f068";
+                }
 
-        li.menu-active > a,
-        li.sub-menu-active > a {
-            color: $c-action;
+            }
+
         }
     }
 }
 
-/* ============================================ *
- * Large Viewports - Dropdown Menu
- * ============================================ */
+//-----------------------------------------------
 
-@include bp(min-width, $bp-medium + 1) {
+@include bp('min-width', $bp-large+1) {
+    #header-nav {
+        background: none;
+        margin: 0;
+        margin-top: 26px;
 
-    .nav-primary {
+        #nav {
+            padding: 0;
 
-        a.level0 {
-            padding: 0 25px;
-        }
+            .menu-icon {
+                display: none;
+            }
 
-        li.level0,
-        a.level0 {
-            display: inline-block;
-        }
+            .nav-primary {
+                display: inline-block;
 
-        li:last-child > a {
-            border-bottom: none;
-        }
+                li {
+                    display: inline-block;
+                    border: none;
+                    margin-right: 32px;
 
-        a:hover,
-        li:hover > a {
-            color: $c-action;
-        }
+                    &:first-child {
+                        margin-left: 73px;
+                    }
 
-        .menu-active {
-            z-index: 200;
-        }
+                    &:last-child {
+                        margin-right: 0;
+                    }
 
-        /* Default styles for 1+ drop-down menus */
-        li.level0 ul {
-            @include menu;
-            position: absolute;
-            left: 0;
-            top: $nav-primary-height; /* Height of ".nav-primary a.level0" */
-            z-index: 10;
-            width: 250px;
-            padding-left: $box-spacing;
-            padding-right: $box-spacing;
-            display: none; /* Hide until displayed. */
-        }
+                    &:hover {
+                        a {
+                            color: $main-color;
+                        }
+                    }
 
-        /* Level 2+ */
-        li.level1 ul {
-            left: 60px;
-            top: 15px;
-        }
+                    a {
+                        color: $c-text;
+                        font-weight: normal;
+                        height: 60px;
+                        line-height: 69px;
+                    }
 
-        /* Class for js to add briefly to evaluate element positioning. */
-        li.level0 ul.level0.position-test {
-            display: block;
-        }
+                    &.parent {
 
-        /* Correct menus that will hang off the page (class added by js) */
-        li.level0 ul.level0.spill {
-            right: 0;
-            left: auto;
+                        ul {
+                            position: absolute;
+                            background: $main-color;
+                            z-index: 9999;
+                            width: -moz-max-content;
+                            width: max-content;
+                            min-width: 182px;
 
-            // Sub-menu drop down to the left
-            li.level1 ul {
-                left: auto;
-                right: 50px;
-                top: 20px;
+                            li {
+                                margin: 0;
+                                display: block;
+                                border-top: 1px solid #007fbf;
+                                background: url('../images/circle.png') no-repeat 12px 50%;
+                                transition: all 0.5s 0s;
+
+                                &:first-child {
+                                    border-top: none;
+                                }
+
+                                &:hover {
+                                    padding-left: 10px;
+                                    background: url('../images/circle_black.png') no-repeat 22px 50%;
+                                    a {
+                                        color: $c-text;
+                                    }
+                                }
+
+                                a {
+                                    padding: 0;
+                                    color: $c-white;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    padding-left: 26px;
+                                    padding-right: 26px;
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            background: url(../images/arrow_selected.png) no-repeat scroll 50% 100%;
+                            ul {
+                                display: block;
+
+                            }
+                        }
+                    }
+                }
+
+                .btn-submenu {
+                    display: none;
+                }
             }
         }
-
-        /* Level 1+ */
-        li.level0 li.parent > a {
-            position: relative;
-
-            &:after {
-                @include triangle(right, 4px, #ccc);
-                right: 5px;
-                top: 50%;
-                margin-top: -3px;
-            }
-        }
     }
 }
 
-.nav-primary li.menu-active {
-    > ul {
-        display: block;
-    }
-}

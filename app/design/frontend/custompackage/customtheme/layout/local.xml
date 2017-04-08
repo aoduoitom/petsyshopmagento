@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout version="0.1.0">
 <default>
+	<!--Add css-->
+	<reference name="head">
+		<action method="addItem">
+			<type>skin_css</type>
+			<name>css/grid.css</name>
+		</action>
+		<action method="addItem">
+			<type>skin_css</type>
+			<name>css/font-awesome.css</name>
+		</action>
+		<action method="addItem">
+			<type>skin_js</type>
+			<name>js/menu.js</name>
+		</action>
+	</reference>
+	<!--Remove global notices-->
 	<reference name="root">
 		<action method="unsetChild"><name>global_notices</name></action>
 	</reference>
 
+	<!--Editting Top Links-->
+	<reference name="top.links">
+		<remove name="checkout_cart_link"/>
+		<block type="checkout/links" name="checkout_link_custom">
+			<action method="addCheckoutLink"></action>
+		</block>
+	</reference>
 </default>
 </layout>
