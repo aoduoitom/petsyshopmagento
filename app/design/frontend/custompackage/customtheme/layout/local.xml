@@ -19,14 +19,101 @@
 	<!--Remove global notices-->
 	<reference name="root">
 		<action method="unsetChild"><name>global_notices</name></action>
+
 	</reference>
 
-	<!--Editting Top Links-->
+	<!--Edit Top Links-->
 	<reference name="top.links">
 		<remove name="checkout_cart_link"/>
 		<block type="checkout/links" name="checkout_link_custom">
 			<action method="addCheckoutLink"></action>
 		</block>
 	</reference>
+
+	<!--Edit Footer-->
+
+	<reference name="footer">
+
+		<remove name="footer.newsletter" />
+		<remove name="cms_footer_links_sm"/>
+		<remove name="footer_links"/>
+		<remove name="footer_links2"/>
+		<remove name="cms_footer_links"/>
+		<remove name="footer_currency"/>
+		<remove name="bottom.container"/>
+		<remove name="store_switcher"/>
+
+		<block type="cms/block" name="footer.intro" before="-">
+			<action method="setBlockId">
+				<block_id>footer-block-intro</block_id>
+			</action>
+		</block>
+
+		<block type="cms/block" name="footer.about.us">
+			<action method="setBlockId">
+				<block_id>footer-links-about-us</block_id>
+			</action>
+		</block>
+
+		<block type="cms/block" name="footer.block.map">
+			<action method="setBlockId">
+				<block_id>footer-block-map</block_id>
+			</action>
+		</block>
+
+		<block type="cms/block" name="footer.links.sm" after="footer.intro">
+			<action method="setBlockId">
+				<block_id>footer_links_sm</block_id>
+			</action>
+		</block>
+
+		<block type="cms/block" name="footer.spliter" after="footer.block.map">
+			<action method="setBlockId">
+				<block_id>footer-spliter</block_id>
+			</action>
+		</block>
+
+		<block type="cms/block" name="footer.links.company " after="footer.spliter">
+			<action method="setBlockId">
+				<block_id>footer_links_company</block_id>
+			</action>
+		</block>
+
+		<block type="cms/block" name="footer.custom.account " after="footer.links.company">
+			<action method="setBlockId">
+				<block_id>footer-custom-account-links</block_id>
+			</action>
+		</block>
+
+		<block type="cms/block" name="footer.links.information " after="footer.custom.account">
+			<action method="setBlockId">
+				<block_id>footer-links-information</block_id>
+			</action>
+		</block>
+
+		<block type="cms/block" name="footer.links.extras " after="footer.links.information">
+			<action method="setBlockId">
+				<block_id>footer-links-extras</block_id>
+			</action>
+		</block>
+
+	</reference>
+
+
+	<!--Add footer legality-->
+
+	<reference name="before_body_end">
+		<block type="core/text_list" name="demo" translate="label">
+			<label>Demo reference</label>
+		</block>
+	</reference>
+	<reference name="demo">
+		<block type="cms/block" name="footer-legality" >
+			<action method="setBlockId">
+				<block_id>footer-legality</block_id>
+			</action>
+		</block>
+	</reference>
+	
 </default>
 </layout>
