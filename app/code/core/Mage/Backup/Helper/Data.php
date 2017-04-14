@@ -63,7 +63,7 @@ class Mage_Backup_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return array(
             self::TYPE_DB                     => $this->__('Database'),
-            self::TYPE_MEDIA                  => $this->__('Database and Media'),
+            self::TYPE_MEDIA                  => $this->__('Db and Media'),
             self::TYPE_SYSTEM_SNAPSHOT        => $this->__('System'),
             self::TYPE_SNAPSHOT_WITHOUT_MEDIA => $this->__('System (excluding Media)')
         );

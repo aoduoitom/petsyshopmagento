@@ -471,7 +471,7 @@ class Mage_Adminhtml_System_StoreController extends Mage_Adminhtml_Controller_Ac
                 ->setPath(Mage::getBaseDir('var') . DS . 'backups');
 
             $backupDb->createBackup($backup);
-            $this->_getSession()->addSuccess(Mage::helper('backup')->__('Database was successfuly backed up.'));
+            $this->_getSession()->addSuccess(Mage::helper('backup')->__('Db was successfuly backed up.'));
         }
         catch (Mage_Core_Exception $e) {
             $this->_getSession()->addError($e->getMessage());

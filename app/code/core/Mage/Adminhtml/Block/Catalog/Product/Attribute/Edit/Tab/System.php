@@ -72,8 +72,8 @@ class Mage_Adminhtml_Block_Catalog_Product_Attribute_Edit_Tab_System extends Mag
 
         $fieldset->addField('backend_type', 'select', array(
             'name' => 'backend_type',
-            'label' => Mage::helper('catalog')->__('Data Type for Saving in Database'),
-            'title' => Mage::helper('catalog')->__('Data Type for Saving in Database'),
+            'label' => Mage::helper('catalog')->__('Data Type for Saving in Db'),
+            'title' => Mage::helper('catalog')->__('Data Type for Saving in Db'),
             'options' => array(
                 'text'      => Mage::helper('catalog')->__('Text'),
                 'varchar'   => Mage::helper('catalog')->__('Varchar'),

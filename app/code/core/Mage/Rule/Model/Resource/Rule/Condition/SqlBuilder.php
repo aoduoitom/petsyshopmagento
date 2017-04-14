@@ -27,7 +27,7 @@
 class Mage_Rule_Model_Resource_Rule_Condition_SqlBuilder
 {
     /**
-     * Database adapter
+     * Db adapter
      *
      * @var Varien_Db_Adapter_Interface
      */

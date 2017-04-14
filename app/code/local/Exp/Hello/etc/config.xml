@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Exp_Hello>
+			<version>0.1.0</version>
+		</Exp_Hello>
+	</modules>
+
+	<frontend>
+		<routers>
+			<waystosayhello>
+				<use>standard</use>
+				<args>
+					<module>Exp_Hello</module>
+					<frontName>waystosayhello</frontName>
+				</args>
+			</waystosayhello>
+		</routers>
+		<layout>
+			<updates>
+				<exp_hello>
+					<file>exp_hello.xml</file>
+				</exp_hello>
+			</updates>
+		</layout>
+	</frontend>
+
+	<global>
+		<blocks>
+			<exp_hello>
+				<class>Exp_Hello_Block</class>
+			</exp_hello>
+
+			<exp_hello_adminhtml>
+				<class>Exp_Hello_Block_Adminhtml</class>
+			</exp_hello_adminhtml>
+
+		</blocks>
+
+		<models>
+			<exp_hello>
+				<class>Exp_Hello_Model</class>
+				<resourceModel>exp_hello_resource</resourceModel>
+			</exp_hello>
+			<exp_hello_resource>
+				<class>Exp_Hello_Model_Resource</class>
+				<entities>
+					<hello>
+						<table>greetings</table>
+					</hello>
+				</entities>
+			</exp_hello_resource>
+		</models>
+
+		<resources>
+			<exp_hello_setup>
+				<setup>
+					<module>Exp_Hello</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</exp_hello_setup>
+
+			<exp_hello_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</exp_hello_write>
+
+			<exp_hello_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</exp_hello_read>
+		</resources>
+
+		<events>
+			<cms_page_prepare_save>
+				<observers>
+					<Exp_Hello_Model_Observer>
+						<type>singleton</type>
+						<class>exp_hello/observer</class>
+						<method>saveCmsPageObserver</method>
+					</Exp_Hello_Model_Observer>
+				</observers>
+			</cms_page_prepare_save>
+		</events>
+	</global>
+	<admin>
+		<routers>
+			<waystosayhello>
+				<use>admin</use>
+				<args>
+					<module>Exp_Hello</module>
+					<frontName>admin_waystosayhello</frontName>
+				</args>
+			</waystosayhello>
+		</routers>
+	</admin>
+	<adminhtml>
+		<layout>
+			<updates>
+				<waystosayhello>
+					<file>exp_hello.xml</file>
+				</waystosayhello>
+			</updates>
+		</layout>
+		<menu>
+			<waystosayhello translate="title" module="adminhtml">
+				<title>Ways to say hello</title>
+				<sort_order>100</sort_order>
+				<children>
+					<viewlist>
+						<title>View List</title>
+						<action>admin_waystosayhello/adminhtml_idex</action>
+					</viewlist>
+				</children>
+			</waystosayhello>
+		</menu>
+	</adminhtml>
+</config>

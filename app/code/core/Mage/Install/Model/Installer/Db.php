@@ -86,7 +86,7 @@ class Mage_Install_Model_Installer_Db extends Mage_Install_Model_Installer_Abstr
             // check InnoDB support
             if (!$resource->supportEngine()) {
                 Mage::throwException(
-                    Mage::helper('install')->__('Database server does not support the InnoDB storage engine.')
+                    Mage::helper('install')->__('Db server does not support the InnoDB storage engine.')
                 );
             }
 
@@ -98,7 +98,7 @@ class Mage_Install_Model_Installer_Db extends Mage_Install_Model_Installer_Abstr
         }
         catch (Exception $e) {
             Mage::logException($e);
-            Mage::throwException(Mage::helper('install')->__('Database connection error.'));
+            Mage::throwException(Mage::helper('install')->__('Db connection error.'));
         }
 
         return $data;
@@ -113,7 +113,7 @@ class Mage_Install_Model_Installer_Db extends Mage_Install_Model_Installer_Abstr
     protected function _getCheckedData($data)
     {
         if (!isset($data['db_name']) || empty($data['db_name'])) {
-            Mage::throwException(Mage::helper('install')->__('Database Name cannot be empty.'));
+            Mage::throwException(Mage::helper('install')->__('Db Name cannot be empty.'));
         }
         //make all table prefix to lower letter
         if ($data['db_prefix'] != '') {

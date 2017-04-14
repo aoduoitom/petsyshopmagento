@@ -26,7 +26,7 @@
 
 
 /**
- * Database backup model
+ * Db backup model
  *
  * @category    Mage
  * @package     Mage_Backup

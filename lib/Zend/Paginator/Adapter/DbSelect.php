@@ -57,7 +57,7 @@ class Zend_Paginator_Adapter_DbSelect implements Zend_Paginator_Adapter_Interfac
     protected $_countSelect = null;
 
     /**
-     * Database query
+     * Db query
      *
      * @var Zend_Db_Select
      */

@@ -34,7 +34,7 @@
 class Mage_Backup_Snapshot extends Mage_Backup_Filesystem
 {
     /**
-     * Database backup manager
+     * Db backup manager
      *
      * @var Mage_Backup_Db
      */

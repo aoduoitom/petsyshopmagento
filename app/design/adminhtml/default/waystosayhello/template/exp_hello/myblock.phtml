@@ -1,0 +1,17 @@
+<form action="<?php echo Mage::getUrl('waystosayhello/index/save')?>" method="post">
+    <fieldset>
+        <ul>
+            <li>
+                <label for="content">Content:</label>
+                <input type="text" name="content" id="content">
+            </li>
+            <li></li>
+            <li>
+                <input type="submit" value="Submit">
+            </li>
+        </ul>
+    </fieldset>
+    <input name="form_key" type="hidden" value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+</form>
+
+<?php echo $this->helloBlock(); ?>

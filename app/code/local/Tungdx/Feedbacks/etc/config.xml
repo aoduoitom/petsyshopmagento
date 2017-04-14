@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Tungdx_Feedbacks>
+            <version>0.1.0</version>
+        </Tungdx_Feedbacks>
+    </modules>
+
+    <global>
+        <block>
+            <tungdx_feedbacks_adminhtml>
+                <class>Tungdx_Feedbacks_Block_Adminhtml</class>
+            </tungdx_feedbacks_adminhtml>
+
+            <tungdx_feedbacks>
+                <class>Tungdx_Feedbacks_Block</class>
+            </tungdx_feedbacks>
+        </block>
+        <model>
+            <tungdx_feedbacks>
+                <class>Tungdx_Feedbacks_Model</class>
+                <resourceModel>tungdx_feedbacks_resource</resourceModel>
+            </tungdx_feedbacks>
+            <tungdx_feedbacks_resource>
+                <class>Tungdx_Feedbacks_Model_Resource</class>
+                <entities>
+                    <feedbacks>
+                        <table>customer_feedbacks</table>
+                    </feedbacks>
+                </entities>
+            </tungdx_feedbacks_resource>
+        </model>
+        <resources>
+            <feedback_setup>
+                <setup>
+                    <module>Tungdx_Feedbacks</module>
+                    <!--<class>Mage_Core_Model_Resource_Setup</class>-->
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </feedback_setup>
+        </resources>
+        <helpers>
+            <tungdx_feedbacks>
+                <class>Tungdx_Feedbacks_Helper</class>
+            </tungdx_feedbacks>
+        </helpers>
+    </global>
+
+    <frontend>
+
+        <routers>
+            <tungdx_feedbacks>
+                <use>standard</use>
+                <args>
+                    <module>Tungdx_Feedbacks</module>
+                    <frontName>feedbacks</frontName>
+                </args>
+            </tungdx_feedbacks>
+        </routers>
+        <routers>
+            <customer>
+                <args>
+                    <modules>
+                        <tungdx_feedbacks before="Mage_Customer">Tungdx_Feedbacks</tungdx_feedbacks>
+                    </modules>
+                </args>
+            </customer>
+        </routers>
+        <layout>
+            <updates>
+                <tungdx_feedbacks>
+                    <file>tungdx_feedbacks.xml</file>
+                </tungdx_feedbacks>
+            </updates>
+        </layout>
+
+    </frontend>
+
+    <admin>
+        <routers>
+            <tungdx_feedbacks_admin>
+                <use>admin</use>
+                <args>
+                    <module>Tungdx_Feedbacks_Adminhtml</module>
+                    <frontName>feedbacks</frontName>
+                </args>
+            </tungdx_feedbacks_admin>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <tungdx_feedbacks>
+                    <file>tungdx_feedbacks.xml</file>
+                </tungdx_feedbacks>
+            </updates>
+        </layout>
+    </adminhtml>
+
+</config>

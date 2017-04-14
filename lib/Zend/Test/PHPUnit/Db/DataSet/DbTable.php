@@ -26,7 +26,7 @@
 #require_once "Zend/Db/Table/Abstract.php";
 
 /**
- * Use a Zend_Db_Table for assertions with other PHPUnit Database Extension table types.
+ * Use a Zend_Db_Table for assertions with other PHPUnit Db Extension table types.
  *
  * @uses       PHPUnit_Extensions_Database_DataSet_QueryTable
  * @category   Zend

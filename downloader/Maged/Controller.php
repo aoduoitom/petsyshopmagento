@@ -1121,8 +1121,8 @@ final class Maged_Controller
         $messagesMap = array(
             Mage_Backup_Helper_Data::TYPE_SYSTEM_SNAPSHOT => 'System backup has been created',
             Mage_Backup_Helper_Data::TYPE_SNAPSHOT_WITHOUT_MEDIA => 'System (excluding Media) backup has been created',
-            Mage_Backup_Helper_Data::TYPE_MEDIA => 'Database and media backup has been created',
-            Mage_Backup_Helper_Data::TYPE_DB => 'Database backup has been created'
+            Mage_Backup_Helper_Data::TYPE_MEDIA => 'Db and media backup has been created',
+            Mage_Backup_Helper_Data::TYPE_DB => 'Db backup has been created'
         );
 
         if (!isset($messagesMap[$type])) {

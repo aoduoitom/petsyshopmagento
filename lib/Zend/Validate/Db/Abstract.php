@@ -25,7 +25,7 @@
 #require_once 'Zend/Validate/Abstract.php';
 
 /**
- * Class for Database record validation
+ * Class for Db record validation
  *
  * @category   Zend
  * @package    Zend_Validate
@@ -70,7 +70,7 @@ abstract class Zend_Validate_Db_Abstract extends Zend_Validate_Abstract
     protected $_exclude = null;
 
     /**
-     * Database adapter to use. If null isValid() will use Zend_Db::getInstance instead
+     * Db adapter to use. If null isValid() will use Zend_Db::getInstance instead
      *
      * @var unknown_type
      */

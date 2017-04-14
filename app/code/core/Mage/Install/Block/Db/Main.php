@@ -25,14 +25,14 @@
  */
 
 /**
- * Database config installation block
+ * Db config installation block
  *
  * @author      Magento Core Team <core@magentocommerce.com>
  */
 class Mage_Install_Block_Db_Main extends Mage_Core_Block_Template
 {
     /**
-     * Array of Database blocks keyed by name
+     * Array of Db blocks keyed by name
      *
      * @var array
      */

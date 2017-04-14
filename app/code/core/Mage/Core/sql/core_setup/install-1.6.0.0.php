@@ -338,7 +338,7 @@ $table = $installer->getConnection()
     ->addColumn('session_data', Varien_Db_Ddl_Table::TYPE_BLOB, '2M', array(
         'nullable'  => false,
         ), 'Session Data')
-    ->setComment('Database Sessions Storage');
+    ->setComment('Db Sessions Storage');
 $installer->getConnection()->createTable($table);
 
 /**

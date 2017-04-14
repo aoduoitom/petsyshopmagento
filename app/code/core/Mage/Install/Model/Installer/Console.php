@@ -286,7 +286,7 @@ class Mage_Install_Model_Installer_Console extends Mage_Install_Model_Installer_
         ));
 
         /**
-         * Database and web config
+         * Db and web config
          */
         $this->_getDataModel()->setConfigData(array(
             'db_model'            => $this->_args['db_model'],

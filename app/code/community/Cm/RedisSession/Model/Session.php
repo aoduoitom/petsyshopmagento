@@ -112,7 +112,7 @@ class Cm_RedisSession_Model_Session extends Mage_Core_Model_Mysql4_Session
             $timeStart = microtime(true);
         }
 
-        // Database config
+        // Db config
         $host =        ((string) $config->descend('host') ?: '127.0.0.1');
         $port =           ((int) $config->descend('port') ?: '6379');
         $pass =        ((string) $config->descend('password') ?: '');

@@ -26,7 +26,7 @@
 
 
 /**
- * Varien Database Adapter Interface
+ * Varien Db Adapter Interface
  *
  * @category    Varien
  * @package     Varien_Db

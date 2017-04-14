@@ -466,7 +466,7 @@ class Mage_Core_Model_Resource_Setup
     }
 
     /**
-     * Retrieve available Database install/upgrade files for current module
+     * Retrieve available Db install/upgrade files for current module
      *
      * @param string $actionType
      * @param string $fromVersion

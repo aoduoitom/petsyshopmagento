@@ -71,7 +71,7 @@ class Zend_Application_Resource_Multidb extends Zend_Application_Resource_Resour
     protected $_defaultDb;
 
     /**
-     * Initialize the Database Connections (instances of Zend_Db_Table_Abstract)
+     * Initialize the Db Connections (instances of Zend_Db_Table_Abstract)
      *
      * @return Zend_Application_Resource_Multidb
      */

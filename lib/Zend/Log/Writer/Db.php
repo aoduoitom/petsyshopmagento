@@ -34,7 +34,7 @@
 class Zend_Log_Writer_Db extends Zend_Log_Writer_Abstract
 {
     /**
-     * Database adapter instance
+     * Db adapter instance
      *
      * @var Zend_Db_Adapter
      */
@@ -57,7 +57,7 @@ class Zend_Log_Writer_Db extends Zend_Log_Writer_Abstract
     /**
      * Class constructor
      *
-     * @param Zend_Db_Adapter $db   Database adapter instance
+     * @param Zend_Db_Adapter $db   Db adapter instance
      * @param string $table         Log table in database
      * @param array $columnMap
      * @return void
@@ -128,7 +128,7 @@ class Zend_Log_Writer_Db extends Zend_Log_Writer_Abstract
     {
         if ($this->_db === null) {
             #require_once 'Zend/Log/Exception.php';
-            throw new Zend_Log_Exception('Database adapter is null');
+            throw new Zend_Log_Exception('Db adapter is null');
         }
 
         if ($this->_columnMap === null) {

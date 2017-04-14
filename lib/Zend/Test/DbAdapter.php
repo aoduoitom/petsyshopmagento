@@ -36,7 +36,7 @@
 #require_once 'Zend/Db/Profiler.php';
 
 /**
- * Testing Database Adapter which acts as a stack for SQL Results
+ * Testing Db Adapter which acts as a stack for SQL Results
  *
  * @category   Zend
  * @package    Zend_Test

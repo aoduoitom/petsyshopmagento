@@ -33,7 +33,7 @@ class Zend_Amf_Adobe_DbInspector
     /**
      * Connect to the database
      *
-     * @param string $dbType Database adapter type for Zend_Db
+     * @param string $dbType Db adapter type for Zend_Db
      * @param array|object $dbDescription Adapter-specific connection settings
      * @return Zend_Db_Adapter_Abstract
      * @see Zend_Db::factory()
@@ -60,7 +60,7 @@ class Zend_Amf_Adobe_DbInspector
      *     'mytable'
      * );
      *
-     * @param string $dbType Database adapter type for Zend_Db
+     * @param string $dbType Db adapter type for Zend_Db
      * @param array|object $dbDescription Adapter-specific connection settings
      * @param string $tableName Table name
      * @return array Table description
@@ -76,7 +76,7 @@ class Zend_Amf_Adobe_DbInspector
     /**
      * Test database connection
      *
-     * @param string $dbType Database adapter type for Zend_Db
+     * @param string $dbType Db adapter type for Zend_Db
      * @param array|object $dbDescription Adapter-specific connection settings
      * @return bool
      * @see Zend_Db::factory()
@@ -91,7 +91,7 @@ class Zend_Amf_Adobe_DbInspector
     /**
      * Get the list of database tables
      *
-     * @param string $dbType Database adapter type for Zend_Db
+     * @param string $dbType Db adapter type for Zend_Db
      * @param array|object $dbDescription Adapter-specific connection settings
      * @return array List of the tables
      */

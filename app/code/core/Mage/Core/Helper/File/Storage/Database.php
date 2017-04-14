@@ -25,7 +25,7 @@
  */
 
 /**
- * Database saving file helper
+ * Db saving file helper
  *
  * @category    Mage
  * @package     Mage_Core
@@ -34,7 +34,7 @@
 class Mage_Core_Helper_File_Storage_Database extends Mage_Core_Helper_Abstract
 {
     /**
-     * Database storage model
+     * Db storage model
      * @var null|Mage_Core_Model_File_Storage_Database
      */
     protected $_databaseModel = null;

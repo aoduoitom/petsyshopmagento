@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <tungdx_feedbacks translate="title" module="tungdx_feedbacks">
+            <title>Manage Customer Feedbacks</title>
+            <sort_order>79</sort_order>
+            <action>tungdx_feedbacks_admin/feedback</action>
+        </tungdx_feedbacks>
+    </menu>
+</config>

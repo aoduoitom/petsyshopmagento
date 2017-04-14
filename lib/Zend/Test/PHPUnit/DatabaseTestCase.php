@@ -58,7 +58,7 @@
 abstract class Zend_Test_PHPUnit_DatabaseTestCase extends PHPUnit_Extensions_Database_TestCase
 {
     /**
-     * Creates a new Zend Database Connection using the given Adapter and database schema name.
+     * Creates a new Zend Db Connection using the given Adapter and database schema name.
      *
      * @param  Zend_Db_Adapter_Abstract $connection
      * @param  string $schema

@@ -381,7 +381,7 @@ Event.observe(window, 'load', function(){
             <div class="profile_entity_type_<?php echo $_entityType ?>">
                 <div id="map_template_<?php echo $_entityType ?>" style="display:none">
                     <span class="field-row">
-                        <?php echo $this->__("In Database:") ?> <select name="gui_data[map][<?php echo $_entityType ?>][db][]" onchange="setMapFileField(this)">
+                        <?php echo $this->__("In Db:") ?> <select name="gui_data[map][<?php echo $_entityType ?>][db][]" onchange="setMapFileField(this)">
                             <?php
                                 $fieldMappingInDatabase = $this->getAttributes($_entityType);
                                 asort($fieldMappingInDatabase);
@@ -397,7 +397,7 @@ Event.observe(window, 'load', function(){
                 <div id="map_container_<?php echo $_entityType ?>">
                     <?php foreach ($this->getMappings($_entityType) as $_i=>$_dbField): ?>
                         <span class="field-row">
-                            <?php echo $this->__("In Database:") ?> <select name="gui_data[map][<?php echo $_entityType ?>][db][]">
+                            <?php echo $this->__("In Db:") ?> <select name="gui_data[map][<?php echo $_entityType ?>][db][]">
                             <?php foreach ($this->getAttributes($_entityType) as $_value=>$_label): ?>
                                 <option value="<?php echo $_value ?>" <?php echo $this->getSelected('gui_data/map/'.$_entityType.'/db/'.$_i, $_value) ?>><?php echo $_label ?></option>
                             <?php endforeach ?>

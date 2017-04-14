@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <Exp_Db>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Exp_Db>
+    </modules>
+</config>

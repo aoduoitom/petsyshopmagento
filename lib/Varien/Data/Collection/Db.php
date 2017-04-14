@@ -87,7 +87,7 @@ class Varien_Data_Collection_Db extends Varien_Data_Collection
     protected $_map = null;
 
     /**
-     * Database's statement for fetch item one by one
+     * Db's statement for fetch item one by one
      *
      * @var Zend_Db_Statement_Pdo
      */

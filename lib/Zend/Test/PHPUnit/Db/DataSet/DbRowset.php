@@ -26,7 +26,7 @@
 #require_once "Zend/Db/Table/Rowset/Abstract.php";
 
 /**
- * Use a Zend_Db Rowset as a datatable for assertions with other PHPUnit Database extension tables.
+ * Use a Zend_Db Rowset as a datatable for assertions with other PHPUnit Db extension tables.
  *
  * @uses       PHPUnit_Extensions_Database_DataSet_AbstractTable
  * @category   Zend

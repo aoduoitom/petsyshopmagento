@@ -54,14 +54,14 @@ class Mage_Core_Model_Resource_Session implements Zend_Session_SaveHandler_Inter
     protected $_sessionTable;
 
     /**
-     * Database read connection
+     * Db read connection
      *
      * @var Varien_Db_Adapter_Interface
      */
     protected $_read;
 
     /**
-     * Database write connection
+     * Db write connection
      *
      * @var Varien_Db_Adapter_Interface
      */

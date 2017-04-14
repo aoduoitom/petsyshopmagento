@@ -27,7 +27,7 @@ mysqlaccess queue queue --superuser=root -H 127.0.0.1
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `queue`
+-- Db: `queue`
 --
 
 -- --------------------------------------------------------

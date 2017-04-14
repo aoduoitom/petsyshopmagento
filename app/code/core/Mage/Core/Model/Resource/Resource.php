@@ -35,7 +35,7 @@
 class Mage_Core_Model_Resource_Resource extends Mage_Core_Model_Resource_Db_Abstract
 {
     /**
-     * Database versions
+     * Db versions
      *
      * @var array
      */

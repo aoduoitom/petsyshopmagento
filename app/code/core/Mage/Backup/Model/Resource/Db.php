@@ -26,7 +26,7 @@
 
 
 /**
- * Database backup resource model
+ * Db backup resource model
  *
  * @category    Mage
  * @package     Mage_Backup
@@ -35,7 +35,7 @@
 class Mage_Backup_Model_Resource_Db
 {
     /**
-     * Database connection adapter
+     * Db connection adapter
      *
      * @var Varien_Db_Adapter_Pdo_Mysql
      */

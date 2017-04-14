@@ -21,7 +21,7 @@
  */
 
 /**
- * Represent a PHPUnit Database Extension table with Queries using a Zend_Db adapter for assertion against other tables.
+ * Represent a PHPUnit Db Extension table with Queries using a Zend_Db adapter for assertion against other tables.
  *
  * @uses       PHPUnit_Extensions_Database_DataSet_QueryTable
  * @category   Zend

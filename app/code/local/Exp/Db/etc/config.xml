@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <Exp_Db>
+            <version>0.1.1</version>
+        </Exp_Db>
+    </modules>
+
+    <frontend>
+        <routers>
+            <dbsetup>
+                <use>standard</use>
+                <args>
+                    <module>Exp_Db</module>
+                    <frontName>dbsetup</frontName>
+                </args>
+            </dbsetup>
+        </routers>
+
+    </frontend>
+    <global>
+        <model>
+            <db>
+                <class>Exp_Db_Model</class>
+                <resourceModel>dbresource</resourceModel>
+            </db>
+            <dbresource>
+                <class>Exp_Db_Model_Resource</class>
+                <entities>
+                    <entity>
+                        <table>articles</table>
+                    </entity>
+                </entities>
+            </dbresource>
+        </model>
+        <resources>
+            <db_setup>
+                <setup>
+                    <module>Exp_Db</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </db_setup>
+            <db_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </db_write>
+            <db_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </db_read>
+        </resources>
+    </global>
+</config>

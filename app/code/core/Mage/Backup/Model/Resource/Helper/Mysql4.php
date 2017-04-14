@@ -171,7 +171,7 @@ class Mage_Backup_Model_Resource_Helper_Mysql4 extends Mage_Core_Model_Resource_
 
         $header = "-- Magento DB backup\n"
             . "--\n"
-            . "-- Host: {$hostName}    Database: {$dbConfig['dbname']}\n"
+            . "-- Host: {$hostName}    Db: {$dbConfig['dbname']}\n"
             . "-- ------------------------------------------------------\n"
             . "-- Server version: {$versionRow['Value']}\n\n"
             . "/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;\n"

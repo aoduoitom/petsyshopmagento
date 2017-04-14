@@ -48,7 +48,7 @@ class Zend_Auth_Adapter_DbTable implements Zend_Auth_Adapter_Interface
 {
 
     /**
-     * Database Connection
+     * Db Connection
      *
      * @var Zend_Db_Adapter_Abstract
      */

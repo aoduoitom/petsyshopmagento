@@ -80,7 +80,7 @@ abstract class Zend_Db_Adapter_Abstract
     protected $_defaultProfilerClass = 'Zend_Db_Profiler';
 
     /**
-     * Database connection
+     * Db connection
      *
      * @var object|resource|null
      */

@@ -25,7 +25,7 @@
  */
 
 /**
- * Database lock storage
+ * Db lock storage
  *
  * @category Mage
  * @package Mage_Core

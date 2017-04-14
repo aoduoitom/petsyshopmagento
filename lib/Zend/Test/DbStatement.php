@@ -26,7 +26,7 @@
 #require_once "Zend/Db/Statement/Interface.php";
 
 /**
- * Testing Database Statement that acts as a stack to SQL resultsets.
+ * Testing Db Statement that acts as a stack to SQL resultsets.
  *
  * @category   Zend
  * @package    Zend_Test

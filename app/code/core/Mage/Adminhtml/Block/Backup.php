@@ -46,7 +46,7 @@ class Mage_Adminhtml_Block_Backup extends Mage_Adminhtml_Block_Template
         $this->setChild('createButton',
             $this->getLayout()->createBlock('adminhtml/widget_button')
                 ->setData(array(
-                    'label' => Mage::helper('backup')->__('Database Backup'),
+                    'label' => Mage::helper('backup')->__('Db Backup'),
                     'onclick' => "return backup.backup('" . Mage_Backup_Helper_Data::TYPE_DB . "')",
                     'class'  => 'task'
                 ))
@@ -62,7 +62,7 @@ class Mage_Adminhtml_Block_Backup extends Mage_Adminhtml_Block_Template
         $this->setChild('createMediaBackupButton',
             $this->getLayout()->createBlock('adminhtml/widget_button')
                 ->setData(array(
-                    'label' => Mage::helper('backup')->__('Database and Media Backup'),
+                    'label' => Mage::helper('backup')->__('Db and Media Backup'),
                     'onclick' => "return backup.backup('" . Mage_Backup_Helper_Data::TYPE_MEDIA . "')",
                     'class'  => ''
                 ))

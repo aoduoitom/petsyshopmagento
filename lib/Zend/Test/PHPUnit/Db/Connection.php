@@ -31,7 +31,7 @@
 #require_once "Zend/Test/PHPUnit/Db/Metadata/Generic.php";
 
 /**
- * Generic Abstraction of Zend_Db Connections in the PHPUnit Database Extension context.
+ * Generic Abstraction of Zend_Db Connections in the PHPUnit Db Extension context.
  *
  * @uses       Zend_Db_Adapter_Abstract
  * @uses       PHPUnit_Extensions_Database_DB_DefaultDatabaseConnection
@@ -51,7 +51,7 @@ class Zend_Test_PHPUnit_Db_Connection extends PHPUnit_Extensions_Database_DB_Def
     protected $_connection;
 
     /**
-     * Database Schema
+     * Db Schema
      *
      * @var string $db
      */

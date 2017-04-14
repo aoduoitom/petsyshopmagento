@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Tungdx_HelloWorld>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Tungdx_HelloWorld>
+	</modules>
+</config>

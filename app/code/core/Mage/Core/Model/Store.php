@@ -659,7 +659,7 @@ class Mage_Core_Model_Store extends Mage_Core_Model_Abstract
     /**
      * Retrieve URL for media catalog
      *
-     * If we use Database file storage and server doesn't support rewrites (.htaccess in media folder)
+     * If we use Db file storage and server doesn't support rewrites (.htaccess in media folder)
      * we have to put name of fetching media script exactly into URL
      *
      * @param null|boolean $secure

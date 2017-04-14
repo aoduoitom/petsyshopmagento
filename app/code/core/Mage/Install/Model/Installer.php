@@ -152,7 +152,7 @@ class Mage_Install_Model_Installer extends Varien_Object
     }
 
     /**
-     * Database installation
+     * Db installation
      *
      * @return Mage_Install_Model_Installer
      */

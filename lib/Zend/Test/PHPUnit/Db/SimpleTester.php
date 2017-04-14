@@ -31,7 +31,7 @@
 #require_once "Zend/Test/PHPUnit/Db/Operation/Insert.php";
 
 /**
- * Simple Tester for Database Tests when the Abstract Test Case cannot be used.
+ * Simple Tester for Db Tests when the Abstract Test Case cannot be used.
  *
  * @uses       PHPUnit_Extensions_Database_DefaultTester
  * @category   Zend

@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `core_cache_tag` (
 */
 
 /**
- * Database cache backend
+ * Db cache backend
  */
 class Varien_Cache_Backend_Database
     extends Zend_Cache_Backend implements Zend_Cache_Backend_ExtendedInterface

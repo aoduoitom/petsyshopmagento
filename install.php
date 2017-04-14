@@ -79,15 +79,15 @@
  * --locale                     // required, Locale
  * --timezone                   // required, Time Zone
  * --default_currency           // required, Default Currency
- * Database connection options:
+ * Db connection options:
  * --db_host                    // required, You can specify server port, ex.: localhost:3307
  *                              // If you are not using default UNIX socket, you can specify it
  *                              // here instead of host, ex.: /var/run/mysqld/mysqld.sock
- * --db_model                   // Database type (mysql4 by default)
- * --db_name                    // required, Database Name
- * --db_user                    // required, Database User Name
- * --db_pass                    // required, Database User Password
- * --db_prefix                  // optional, Database Tables Prefix
+ * --db_model                   // Db type (mysql4 by default)
+ * --db_name                    // required, Db Name
+ * --db_user                    // required, Db User Name
+ * --db_pass                    // required, Db User Password
+ * --db_prefix                  // optional, Db Tables Prefix
  *                              // No table prefix will be used if not specified
  * Session options:
  * --session_save <files|db>    // optional, where to store session data - in db or files. files by default

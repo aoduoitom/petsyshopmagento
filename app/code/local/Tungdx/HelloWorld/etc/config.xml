@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Tungdx_HelloWorld>
+			<version>0.1.0</version>
+		</Tungdx_HelloWorld>
+	</modules>
+	<frontend>
+		<routers>
+			<helloworld>
+				<use>standard</use>
+				<args>
+					<module>Tungdx_HelloWorld</module>
+					<frontName>helloworld</frontName>
+				</args>
+			</helloworld>
+		</routers>
+	</frontend>
+	<admin>
+		<routers>
+			<helloworld>
+				<use>admin</use>
+				<args>
+					<module>Tungdx_HelloWorld</module>
+					<frontName>admin_helloworld</frontName>
+				</args>
+			</helloworld>
+		</routers>
+	</admin>
+	<global>
+		<helpers>
+			<helloworld>
+				<class>Tungdx_HelloWorld_Helper</class>
+			</helloworld>
+		</helpers>
+	</global>
+	<adminhtml>
+		<menu>
+			<helloworld module="helloworld">
+				<title>HelloWorld</title>
+				<sort_order>100</sort_order>
+				<children>
+					<helloworld>
+						<title>Hello World</title>
+						<sort_order>0</sort_order>
+						<action>admin_helloworld/adminhtml_index</action>
+					</helloworld>
+				</children>
+			</helloworld>
+		</menu>
+	</adminhtml>
+	
+</config>

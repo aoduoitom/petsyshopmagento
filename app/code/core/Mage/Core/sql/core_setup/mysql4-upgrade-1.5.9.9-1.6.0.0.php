@@ -774,7 +774,7 @@ $tables = array(
                 'comment'   => 'Session Data'
             )
         ),
-        'comment' => 'Database Sessions Storage'
+        'comment' => 'Db Sessions Storage'
     ),
     $installer->getTable('core/layout_update') => array(
         'columns' => array(

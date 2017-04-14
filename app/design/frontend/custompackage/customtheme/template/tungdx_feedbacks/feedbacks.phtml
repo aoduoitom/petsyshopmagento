@@ -1,0 +1,35 @@
+<div class="content-header">
+    <table cellspacing="0" class="grid-header">
+        <tr><td><h3><?php print $this->__('Feedback Form')?></h3></td></tr>
+    </table>
+</div>
+<div class="entry-edit">
+    <form id="edit_form" name="edit_form" method="post"
+          action="<?php print Mage::getUrl('*/*/post', array('_secure' => true)) ?>">
+        <input name="form_key" type="hidden"
+               value="<?php echo Mage::getSingleton('core/session')->getFormKey() ?>" />
+        <fieldset id="my-fieldset">
+            <div class="fieldset">
+                Name <br/>
+                <input class="input-text required-entry" name="customer_name" />
+                <br />Email <br/>
+                <input class="input-text validate-email required-entry" name="customer_email" />
+                <br />Feedback <br/>
+                <textarea class="input-text required-entry" name="customer_feedback" />
+                </textarea>
+                <br /><br />
+                <button type="button"  onclick="validateForm(this)" class="button"
+                        id="btnSubmit" >
+                    <span><?php echo $this->__('Submit') ?></span></button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<script type="text/javascript">
+    var editForm = new VarienForm('edit_form', true);
+    function validateForm(button) {
+        if (editForm.validator && editForm.validator.validate()) {
+            editForm.submit();
+        }
+    }
+</script>

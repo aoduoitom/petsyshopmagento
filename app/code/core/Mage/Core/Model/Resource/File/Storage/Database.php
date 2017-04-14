@@ -107,7 +107,7 @@ class Mage_Core_Model_Resource_File_Storage_Database extends Mage_Core_Model_Res
     }
 
     /**
-     * Decodes blob content retrieved by Database driver
+     * Decodes blob content retrieved by Db driver
      *
      * @param  array $rows Array of table rows (files), each containing 'content' key
      * @return array
